@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios HTML</title>
+</head>
+<body>
+    
+    <header>
+        <h1>Formularios</h1>
+    </header>
+
+    <div>
+        <h2>Contactanos</h2>
+        <p>* campos obligatorios</p>
+        <!-- formulario:
+            
+            <label>
+                <input>
+                <select>
+                <textarea>
+                        
+nombre / email / fecha / genero / mensaje / newsletter / asunto
+        -->
+        <form action="mailto:mail@mail.com" method="POST">
+
+            <div>
+                <label>
+                    Nombre *
+                    <input type="text" name="nombre" required>
+                </label>
+            </div>
+
+            <div>
+                <label>
+                    Email *
+                    <input type="email" name="email" required pattern="/\S+@\S+\.\S+/">
+                </label>
+            </div>
+            
+            <div>
+                Asunto
+                <select name="asunto">
+                    <option value="presu">Presupuesto</option>
+                    <option value="consu">Consulta</option>
+                    <option value="recl">Reclamo</option>
+                </select>
+            </div>
+            
+            <div>
+                <label>
+                    Fecha
+                    <input type="datetime-local" name="fecha">
+                </label>
+            </div>
+
+            <div>
+                <!-- radio -> opcion -->
+                genero
+                M <input type="radio" name="genero" value="masc">
+                F <input type="radio" name="genero" value="fem">
+                X <input type="radio" name="genero" value="otro">
+            </div>
+
+            <div>
+                <!-- checkbox -> verificacion -->
+                <label>
+                <input type="checkbox" name="news" value="acepta" checked>
+                Acepto recibir todo el SPAM de este sitio
+                </label>
+            </div>
+
+            <div>
+                <label>
+                    Mensaje
+                    <textarea name="mensaje" maxlength="10"></textarea>
+                </label>
+            </div>
+
+            <!-- Validacion: required -->
+            
+            <!-- enviar -->
+            <div>
+                <input type="submit" value="Contactanos">
+            </div>
+
+            
+
+            
+
+
+
+        </form>
+    </div>
+
+</body>
+</html>
