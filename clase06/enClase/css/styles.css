@@ -1,0 +1,102 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ranchers&display=swap');
+
+/* inportar fuentes locales */
+@font-face{
+    font-family: "bevan";
+    src: url("fonts/bevan.ttf"),
+}
+
+body {
+    background: rgb(166, 193, 27);
+    font-family: "Montserrat", sans-serif;
+}
+h2{
+    color: white;
+}
+
+header{
+    color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    /* vh -> viewport height */
+    height: 16vh ;
+
+}
+header h1{
+    font-family: "Ranchers", sans-serif;
+    font-weight: 400;
+}
+
+#color-header{
+    color: red;
+}
+
+header,nav,section,footer{
+    background: rgba(255, 255, 255, 0.565);
+    /* medidas absolutas */
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+        /* centrar cajas */
+        width: 80vw;
+        margin-left: auto;
+        margin-right: auto;
+}
+    .caja-google{
+        /* medidas relativas */
+        width: 50%;
+        background: tomato;text-align: right;
+    }
+
+p{
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
+    font-size: 14px;
+}
+
+.primerParrafo{
+    color: rgb(152, 152, 152);
+    font-weight: bold;
+    line-height: 24px;
+}
+
+.section{
+    background: rgb(255, 255, 255);
+}
+
+#section-main{
+    border: 1px solid rgb(67, 67, 67);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.textos{
+    margin-top: 20px;
+    border: 1px solid black;
+    padding: 1em;
+    font-size: 18px;
+    }
+    .textos h3{
+        margin-bottom: 1.2em;
+    }
+    .textos p{
+        font-size: 1.2em;
+        font-family: "bevan";
+        margin-bottom: 1em;
+        /* Colores web */
+        background: rgba(35, 214, 116, 0.819);
+        color: aliceblue;
+        padding: 0.5em;
+        /* fuentes web 
+        font-family: 'Courier New', Courier, monospace;*/
+    }
+    /* fontAwesome */
+    .social a{
+        font-size: 4em;
+        color: white;
+        text-decoration: none;
+    }

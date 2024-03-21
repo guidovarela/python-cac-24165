@@ -1,0 +1,70 @@
+/* selector universal */
+*{
+    /* reset de espaciado */
+    margin: 0;
+    padding: 0;
+}
+
+
+.ancho50{width: 50%;}
+.ancho75{width: 75%;}
+.ancho100{width: 100%;}
+
+header{
+    background: rgb(188, 123, 17);
+    color: white;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 10px;
+    text-align: center; 
+    /* herencia: madre a hija */
+}
+
+/* agrupamiento */
+header,section,nav,footer{
+    margin-top: 32px;
+    margin-bottom: 32px;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    border: 1px solid grey;
+}
+
+
+p {
+    font-family: "Arial";
+    font-size: 18px;
+    color: brown;
+}
+/* selector de clase */
+.primerp{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(16, 106, 22);
+}
+.segp{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(89, 102, 188);
+}
+.tercerp{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(155, 141, 17);
+}
+
+/* selector Id */
+#contenido-principal{
+    background: url("../img/superman.png"), rgb(54, 54, 207);
+    background-size: cover ;
+    
+}
+
+
+
+a {
+    color: rgb(21, 101, 206);
+    text-decoration: none;
+}
+
+a:hover{
+    background-color: red;
+}
