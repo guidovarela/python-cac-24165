@@ -1,0 +1,69 @@
+        /* Fonts Google */
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Montserrat:wght@100;500;600&display=swap');
+
+/* Iconos - FontAwesome */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
+
+
+        
+        /* Estilos globales */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Definición de la cuadrícula */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual ancho */
+            grid-gap: 20px; /* Espacio entre las celdas */
+            padding: 20px;
+        }
+
+        /* Estilos para los elementos dentro de la cuadrícula */
+        .article {
+            border: 1px solid #ddd;
+            padding: 10px;
+            /* filtros fotograficos */
+            filter: blur(10px);
+            transition: 0.3s;
+            }
+            .article:hover{
+                filter: blur(0);
+            }
+
+        .article img {
+            max-width: 100%;
+        }
+
+        /* Estilos para encabezados y otros elementos */
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+
+        /* dispositivos pequeños */
+@media screen and (min-width:0px) and (max-width:672px){
+        .container{
+        grid-template-columns: 1fr;
+    }
+}
+/* dispositivos medianos */
+@media screen and (min-width:673px) and (max-width:990px) {
+    .container{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* dispositivos grandes */
+@media screen and (min-width: 991px) and (max-width: 1296px) {
+    .container{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+/* Disp. Extra grandes -> min-width1297px*/

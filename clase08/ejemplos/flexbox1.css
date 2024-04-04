@@ -1,0 +1,64 @@
+*{font-family: Verdana;}
+.contenedor {
+    background-color: blue;
+    display: flex; 
+    flex-direction:row;
+    /* flex-direction:row-reverse; */
+    /* flex-direction:column; */
+    /* flex-direction:column-reverse; */
+    
+    flex-wrap:nowrap;
+    /* flex-wrap: wrap; */
+    /* flex-wrap:wrap-reverse; */
+}
+
+.contenedor > div, .contenedor2 > div, .contenedor3 > div, .contenedor4 > div{
+    background-color: red;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+}
+
+.contenedor2{
+    background-color: blue;
+    display: flex; 
+    flex-direction:row;
+    flex-wrap:nowrap;
+    
+    justify-content: flex-start;
+    /* justify-content: flex-end; */
+    /* justify-content: center; */
+    /* justify-content: space-between; */
+    /* justify-content: space-around; */
+    /* justify-content: space-evenly; */
+}
+
+.contenedor3{
+    background-color: blue;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 300px;
+    
+    align-content: flex-start;
+    /* align-content: flex-end; */
+    /* align-content: center; */
+    /* align-content: space-between; */
+    /* align-content: space-around; */
+    /* align-content: stretch; */   
+}
+.contenedor4{
+    background-color: blue;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 300px;
+    
+    align-items: flex-start;
+    /* align-items: flex-end; */
+    /* align-items: center; */
+    /* align-items: stretch; */   
+    /* align-items: baseline; */
+}

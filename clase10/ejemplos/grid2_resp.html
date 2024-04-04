@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Sitio de Noticias</title>
+    <style>
+                /* Fonts Google */
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Montserrat:wght@100;500;600&display=swap');
+
+/* Iconos - FontAwesome */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
+
+        /* Estilos globales */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Estilos para encabezados y otros elementos */
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+        .container {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-gap: 20px;
+                padding: 20px;
+            }
+
+        /* Estilos para dispositivos móviles (ancho menor a 768px) */
+        @media (max-width: 768px) {
+            /* Cambiamos a un diseño de una sola columna */
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Estilos para dispositivos de pantalla grande (ancho mayor a 768px) */
+        @media (min-width: 769px) and (max-width:990px){
+            /* Mantenemos el diseño de tres columnas */
+            .container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 20px;
+                padding: 20px;
+            }
+        }
+
+        /* Estilos para los elementos dentro de la cuadrícula */
+        .article {
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+
+        .article img {
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Últimas Noticias</h1>
+    <div class="container">
+        <div class="article">
+            <img src="img/news1.jpg" alt="Noticia 1">
+            <h2>Título de la Noticia 1</h2>
+            <p>Descripción de la Noticia 1.</p>
+        </div>
+        <div class="article">
+            <img src="img/news2.jpg" alt="Noticia 2">
+            <h2>Título de la Noticia 2</h2>
+            <p>Descripción de la Noticia 2.</p>
+        </div>
+        <div class="article">
+            <img src="img/news1.jpg" alt="Noticia 3">
+            <h2>Título de la Noticia 3</h2>
+            <p>Descripción de la Noticia 3.</p>
+        </div>
+        <div class="article">
+            <img src="img/news3.jpg" alt="Noticia 4">
+            <h2>Título de la Noticia 4</h2>
+            <p>Descripción de la Noticia 4.</p>
+        </div>
+        <div class="article">
+            <img src="img/news1.jpg" alt="Noticia 5">
+            <h2>Título de la Noticia 5</h2>
+            <p>Descripción de la Noticia 5.</p>
+        </div>
+        <div class="article">
+            <img src="img/news3.jpg" alt="Noticia 6">
+            <h2>Título de la Noticia 6</h2>
+            <p>Descripción de la Noticia 6.</p>
+        </div>
+    </div>
+</body>
+</html>

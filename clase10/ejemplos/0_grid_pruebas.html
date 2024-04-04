@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+
+    <style>
+
+        /* *{box-sizing: border-box;} */
+
+
+        .grid-container{
+            display: grid;
+            /* % - fr - px */
+            grid-template-columns: 0.6fr 2fr 0.6fr ;
+            /* vh -> viewport height */
+            /* vw -> viewport width */
+            grid-template-rows: 20vh 30vh 20vh;
+            column-gap: 20px ;
+            justify-content: start;
+            
+            
+            /* row-gap: 10px;             */
+        }
+        .grid-container div, .container-fr div{
+            padding: 20px;
+            border: 1px solid black;
+            background: rgb(196, 68, 68);
+            /* margin-left: 10px ;
+            margin-right: 10px ; */
+        }
+        /* .grid-container div:nth-child(2){
+            margin-bottom: 10px ;
+        } */
+
+        .container-fr{
+            display: grid;
+            grid-template-columns: 1fr 0.5fr 0.5fr 1fr;
+            /* funcion repeat(cantidad, tamaño) */
+            /* funcion minmax(minimo, maximo) */
+            grid-template-columns: 1fr repeat(2,0.5fr) 1fr ;
+            grid-template-rows: 1fr 0.5fr;
+            }
+            .item{
+                transition: 1s;
+            }
+            .item:hover{
+                background: gold;
+                transform: scale(1.1);
+            }
+        
+
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Grid</h1>
+    </div>
+    <div class="container-fr">
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel magni eius officia eligendi deleniti, iusto, fugit quis soluta voluptate quibusdam laborum consequuntur atque odit reprehenderit illum molestias debitis numquam doloribus.</div>
+        <div class="item">cajas 2</div>
+        <div class="item">cajas 3</div>
+        <div class="item">cajas 4</div>
+        <div class="item">cajas 5</div>
+        <div class="item">cajas 6</div>
+        <div class="item">cajas 7</div>
+        <div class="item">cajas 8</div>
+    </div>
+
+    <hr>
+
+    <div class="grid-container">
+        <div>Caja1</div>
+        <div>Caja2</div>
+        <div>Caja3</div>
+        <div>Caja4</div>
+        <div>Caja5</div>
+        <div>Caja6</div>
+    </div>
+
+    
+</body>
+</html>

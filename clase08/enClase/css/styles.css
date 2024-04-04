@@ -1,0 +1,138 @@
+/* Fonts Google */
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Montserrat:wght@100;500;600&display=swap');
+
+/* Iconos - FontAwesome */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
+
+
+html{
+    font-family: "Montserrat";
+    font-size: 16px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* flexbox */
+
+
+
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+
+    }
+    .item{
+        width: 24%;
+        background: white;
+        margin-bottom: 10px;
+    }
+
+    .news-sec{
+        height: 50vh;
+        border: 1px solid white;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        }
+        .banner{
+            width: 30%;
+            height: 240px;
+            background: greenyellow;
+        }
+/* header */
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+    background: white;
+    margin-bottom: 10px;
+    }
+    nav{
+        padding-right: 5%;
+    }
+
+/* noticias */
+.news-main{
+    width: 90%; margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    }
+    .news-main article{
+        width: 30%;
+        padding: 2%;
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 15px;
+        margin-bottom: 10px;
+        }
+        .news-main article img{
+            width: 100%;
+        }
+
+
+
+
+/* Responsive Design - Media Queries
+
+pequeños: <= 576px
+medianos: > 577px <= 900px
+grandes: > 901px <= 1200px
+*/
+
+/* small */
+@media screen and (max-width:576px) {
+    
+    body{
+        background: rgb(206, 52, 25);
+    }
+    header{
+        flex-wrap: wrap;
+    }
+    .logo{
+        text-align: center;
+        width: 100%;
+    }
+    .news-main{
+        width: 100%;
+        flex-direction: column;
+    }
+    .news-main article{
+        width: 100%;
+    }
+}
+
+/* medium */
+@media screen and (min-width:577px) and (max-width:900px) {
+    body{
+        background: rgb(202, 123, 11);
+    }
+    .news-main{
+        flex-wrap: wrap;
+    }
+    .news-main article:first-child{
+        width: 100%;
+        }
+        .news-main article:first-child .img{
+            max-height:200px;
+            overflow-y: hidden;
+        }
+    .news-main article{
+        width: 49%;
+    }
+}
+
+/* large */
+@media screen and (min-width:901px) and (max-width:1200px) {
+    body{
+        background: rgb(11, 132, 202);
+        color: white;
+    }
+}

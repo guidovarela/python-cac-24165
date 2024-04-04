@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuadrícula Simple (2 columnas)</title>
+    <style>
+        body{
+            background: lightskyblue;
+        }
+        .container {
+            background: white;
+            width: 80%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 30% 40% auto; /* Dos columnas de igual ancho */
+            column-gap: 10px;
+        }
+
+        .item {
+            padding: 20px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ejemplo 1: Cuadrícula Simple de Dos Columnas</h1>
+    </header>
+
+    <div class="container">
+        <div class="item">Elemento 1</div>
+        <div class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque accusantium ut sit laboriosam quod voluptates. Adipisci consequatur placeat, natus dolorem quod itaque aperiam impedit hic provident iure voluptate, enim sunt.</div>
+        <div class="item">Elemento 3</div>
+        <div class="item">Elemento 4</div>
+        <div class="item">Elemento 5</div>
+        <div class="item">Elemento 6</div>
+    </div>
+</body>
+</html>
