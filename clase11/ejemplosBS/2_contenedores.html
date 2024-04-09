@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Incorporar la etiqueta link de Bootstrap con su cdn -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous"> -->
+    
+    <!-- Incorporar la etiqueta link de Bootstrap de forma local, descargar e incluirlo-->
+    <link rel="stylesheet" href="bootstrap-5.3.0-alpha3-dist/bootstrap-5.3.0-alpha3-dist/css/bootstrap.min.css">
+    <title>CSS-BOOTSTRAP</title>
+</head>
+<body>
+
+    <h1>Contenedores</h1>
+    <!-- 
+                 __________________________  
+    Container-> | F  _________________     |
+                | i |   __ __ __ __   |    |
+                | l |  |__|__|__|__|  |    |  
+                | a |_________________|    |  
+                |__________________________|-->
+
+    <!-- Fuente: https://getbootstrap.com/docs/5.3/layout/containers/ -->
+
+    <!-- Crear subtítulo para Contenedor fluido  -->
+    <!-- Crear el container-fluid de Bootstrap -->
+    <!-- Crear una fila (div.row) -->
+    <!-- Incluir en la fila 4 columnas (div.col) 
+    distinguir con diferentes color de fondo (Agregar la clase -> bg-nombre_del_color)
+    Incorporar texto en el primer div-->
+    <!-- Fuente color Bootstrap: https://getbootstrap.com/docs/5.3/customize/color/#colors -->
+        <h2>Contenedor fluido</h2>
+
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-3 bg-success">1</div>
+                <div class="col-3 bg-danger">2</div>
+                <div class="col-3 bg-warning">3</div>
+                <div class="col-3 bg-info">4</div>
+
+            </div>
+
+            <!-- Otra fila -->
+            <div class="row mt-5">
+                <div class="col-6 bg-success">1</div>
+                <div class="col-6 bg-danger">2</div>
+            </div>
+
+
+        </div>
+
+    
+    <!-- Contenedor de clase container, tiene incluido Media Queries-->
+    <!-- Agregar un subtitulo: Contenedor container -->
+    <!-- Crear la división container de Bootstrap (div.container)-->
+    <!-- Incluir en una fila, dos columnas (una de 4 y otra de 8 col)
+    NOTA: Recordar que el contenedor se divide en 12 columnas -->
+    <!-- Crear otra fila con 4 columnas (cada una ocupe 3col)-->
+
+    <h2>Contenedor container</h2>
+    
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-4" style="background-color: blueviolet;">col-4</div>
+
+            <div class="col-8" style="background-color: chartreuse;">col-8</div>
+
+        </div>
+
+        <!-- Otra fila -->
+        <div class="row mt-3">
+
+            <div class="col-3" style="background-color: aqua;">1</div>
+            <div class="col-3 bg-info">2</div>
+            <div class="col-3 bg-danger">3</div>
+            <div class="col-3 bg-success">4</div>
+
+
+        </div>
+
+    </div>
+    
+
+
+    
+    
+</body>
+</html>

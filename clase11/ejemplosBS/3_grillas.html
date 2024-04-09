@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Incorporar la etiqueta link de Bootstrap con su cdn -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous"> -->
+    
+    <!-- Incorporar la etiqueta link de Bootstrap de forma local, descargar e incluirlo-->
+    <link rel="stylesheet" href="bootstrap-5.3.0-alpha3-dist/bootstrap-5.3.0-alpha3-dist/css/bootstrap.min.css">
+    <title>CSS-BOOTSTRAP</title>
+</head>
+<body>
+    <h1>Grillas Bootstrap</h1>
+    <!-- Mantiene un sistema de grillas con 12 columnas -->
+
+    <!-- Crear un conteiner fluido y dentro
+    definir una fila con 2 columnas que abarquen cada una 6 columnas,
+    agregar color de fondo 
+    Luego usar clases para cambiar la distribución de las columnas 
+    (Ej: col-lg-9) La columna para pantallas largas ocupará 9 col y la 
+    otra columna ocupará 3
+    que tienen incluido Media Queries -->
+
+    <!-- Fuente: https://getbootstrap.com/docs/5.3/layout/containers/ -->
+    <!-- Fuente color(bg: background-color) Bootstrap: https://getbootstrap.com/docs/5.3/customize/color/#colors -->
+    <!-- Fuente: https://getbootstrap.com/docs/5.3/layout/columns/ -->
+
+    <div class="container-xxl">
+
+        <div class="row">
+
+            <div class="col-6 bg-info col-lg-9">col-6</div>
+            <div class="col-6 bg-success col-lg-3">col-6</div>
+
+
+        </div>
+
+    </div>
+ 
+
+    
+</body>
+</html>
