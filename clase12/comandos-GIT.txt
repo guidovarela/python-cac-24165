@@ -1,0 +1,32 @@
+    <!-- #----COMANDOS BÁSICOS PARA INICIALIZAR LA CARPETA GIT EN VISUAL STUDIO CODE--------
+        1. Verficar si la instalación de Git esta ok con: git version
+        2. Inicializar git (Genera un archivo oculto donde guarda la info del proyecto y veremos los archivos con una U): git init
+        3. Consultar estado del repositorio (Se verá: Untracked files [No tienen seguimiento]): git status
+        4. Agregar el archivo a la carpeta:  git add nombre_del_archivo
+        5. Verificar estado de los archivos (Se verá el archivo con una A de agregado): git status
+        6. Se hace un comentario para registrar el cambio:  git commit -m "Comentario"
+        7. Agregar contenido al html y css (Para agregar todos archivos a la carpeta se usa el .): git add .
+        8. Volver a comentar el cambio realizado en la carpeta de trabajo: git commit -m "Comentario"
+        9. Ver todos los commit realizados en la carpeta de trabajo: git log --oneline
+        10.Permite regresar a una carpeta trabajada anteriormente: git reset --hard código_del_commit
+
+
+        # ----Comunicar el repositorio local con el repositorio remoto en GitHub---------
+        1. Loguearse en GitHub.
+        2. Crear un repositorio (Asignar un nombre y descripción): create repository
+        3. Agregar los tres comandos finales de uno a uno: git remote add origin url_del_repositorio
+        4. Comando que indica a que rama enviará la info (A la principal): git branch -M main
+        5. Comando que envía la info por primera vez del repositorio local al remoto: git push -u origin main
+    
+        #---- Fork------
+        1. Fork al repositorio: https://github.com/CodoAlumnos/EJEMPLOS_CSS
+        Botón Fork (Deben estra logueados en su cuenta de GitHub)
+
+        # ---Clonar repositorio----
+        git clone url_del_repositorio
+
+        # Si le pide identificarse--------------------------------------------------------
+        git config user.email "ESCRIBIR EL CORREO CON EL QUE SE REGISTRARON EN GITHUB"
+        git config --global user.name "NOMBRE DE USUARIO"
+        
+    -->
