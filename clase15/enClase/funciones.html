@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones</title>
+</head>
+<body>
+
+    <a href="#" onclick="saludar('Guido')">Activa tu saludo</a>
+    <script>
+        
+    // definicion:
+    //function nombre(argumento) { instrucciones -> scope }
+
+    let pais = "Argentina"
+
+    //Ejecucion
+    // nombre()
+    function saludar(user){
+        //scope:
+        alert("Hola "+user)
+        console.log(user)
+        console.log(pais)
+    }
+    // saludar("Guido")
+    // saludar("Maria")
+    // saludar("pepe")
+
+    // variables alcance local -> dentro de la funcion
+    // variables alcance global -> por fuera de la funcion
+
+    function tablaDelUno() {
+    for (i = 1; i <= 10; i++) {
+        console.log("1 x", i, "=", 1 * i); }
+    }
+    
+    let suma = 2 + 5
+    let result = 5
+
+    function tablas(num, result) {
+        for (i = 1; i <= result; i++) {
+            console.log(num,"x", i, "=", num * i); }
+            document.body.innerHTML+=num +"x"+ i+ "="+ num * i
+    }
+    tablas(suma, 10)
+    // dentro de la funcion: num = suma
+
+
+    </script>
+    
+</body>
+</html>

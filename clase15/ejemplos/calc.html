@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora JS</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Calculando...</h1>
+
+        <form action="" class="w-50 container mb-5">
+            <div>
+                <input type="number" class="form-control" name="" id="num1" placeholder="inserte un numero">
+                <select name="" id="signo" class="form-control">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="/">/</option>
+                    <option value="*">*</option>
+                </select>
+                 <input type="number" class="form-control" name="" id="num2" placeholder="inserte un numero">
+            </div>
+            <button id="btn-calc" type="button" class="btn btn-warning">Calcular</button>
+            <button id="reset-calc" type="reset" class="btn btn-warning">Borrar</button>
+        </form>
+
+        <div id="resultado" class="text-center"></div>
+    </div>
+
+    <script src="calc.js"></script>
+
+</body>
+</html>
