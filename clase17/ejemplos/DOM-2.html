@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<title>DOM-2</title>
+<style>
+    * {
+        font-family: Verdana, Geneva, Tahoma, sans-serif
+    }
+</style>
+
+<body>
+
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <hr>
+    <form>
+        Apellido: <input name="fname" type="text" value="Pérez"><br>
+        Nombre: <input name="fname" type="text" value="Juan">
+    </form>
+    <br>
+    <button onclick="obtenerTag()">tagName</button>
+    <button onclick="obtenerValor()">value</button>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <hr>
+    <p>Lista desordenada:</p>
+    <ul>
+        <li>Café</li>
+        <li>Té</li>
+        <li>Leche</li>
+    </ul>
+    ¿Qué elemento desea? (0, 1, 2): 
+    <input name="seleccion" type="number" min=0 max=2><br>
+    <button onclick="obtenerElemento()">Obtener elemento</button>
+    <p id="demo3"></p>
+
+    <script>
+        //getElementsByClassName
+        const items = document.getElementsByClassName("item");  // [div, div, div]
+        console.log(items[0]);  // Primer item encontrado: <div class="item">Item 1</div>
+        console.log(items.length);  // 3
+
+        //getElementsByName
+        function obtenerTag() {
+            var x = document.getElementsByName("fname")[0].tagName;
+            document.getElementById("demo").innerHTML = x;
+        }
+        function obtenerValor() {
+            var y = document.getElementsByName("fname")[1].value;
+            document.getElementById("demo2").innerHTML = y;
+        }
+
+        //getElementsByTagName
+        function obtenerElemento() {
+            var z = document.getElementsByTagName("li"); //obtenemos los elementos "li"
+            var a = document.getElementsByName("seleccion")[0].value; //obtenemos lo que escvribió el usuario
+            document.getElementById("demo3").innerHTML = z[a].innerHTML;
+        }
+    </script>
+</body>
+
+</html>

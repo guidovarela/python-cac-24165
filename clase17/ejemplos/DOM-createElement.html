@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<title>createElement</title>
+<style>
+    * {
+        font-family: Verdana, Geneva, Tahoma, sans-serif
+    }
+</style>
+
+<body>
+
+    <p>Hacer clic en el botón para agregar un botón</p>
+    <button onclick="agregarBoton()">Agregar botón</button>
+    <p>Hacer clic en el botón para agregar un título</p>
+    <button onclick="agregarTitulo()">Agregar título</button>
+    <p id="parrafo">Hacer clic en el botón para copiar este párrafo</p>
+    <button onclick="copiarParrafo()">Copiar</button>
+    <script>
+        //.createElement
+        function agregarBoton() {
+            var btn = document.createElement("BUTTON");
+            btn.innerHTML = "Haz clic!";
+            document.body.appendChild(btn);
+        }
+        //.createElement y .createTextNode
+        function agregarTitulo() {
+            var tit = document.createElement("h1");
+            var titContenido = document.createTextNode("Soy un titulo");
+            tit.appendChild(titContenido);
+            document.body.appendChild(tit);
+        }
+        //.cloneNode
+        function copiarParrafo() {
+            var itm = document.getElementById("parrafo");
+            var cln = itm.cloneNode(true);
+            document.body.appendChild(cln);
+        }
+    </script>
+
+</body>
+
+</html>

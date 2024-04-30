@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<title>DOM-3</title>
+<style>
+    * {
+        font-family: Verdana, Geneva, Tahoma, sans-serif
+    }
+</style>
+
+<body>
+    <h2 class="ejemplo">Encabezado con clase "ejemplo"</h2>
+    <p class="ejemplo">Párrafo con clase "ejemplo".</p>
+    <button class="boton" onclick="agregarFondo()">Agregar fondo</button>
+    
+    <script>
+        function agregarFondo() {
+            document.querySelector(".ejemplo").style.backgroundColor = "lightblue";
+            document.querySelector(".boton").innerHTML = "Gracias! :)";
+        }
+    </script>
+    
+</body>
+
+</html>

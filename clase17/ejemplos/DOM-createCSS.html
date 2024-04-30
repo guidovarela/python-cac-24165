@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>createElementCSS</title>
+    <style>
+        * {
+            font-family: Verdana, Geneva, Tahoma, sans-serif
+        }
+    </style>
+    
+</head>
+<body>
+    <script>
+            const div = document.createElement("div");
+            div.id = "page";
+            div.className = "data";
+            div.innerHTML = "Texto con estilo";
+            div.style.color = "red";
+            div.style.background = "lightblue";
+            div.style.border = "2px solid black";
+            document.body.appendChild(div);
+            
+            const div2 = document.createElement("div");
+            div2.className = "nuevaClase";
+            div2.innerHTML = "Texto con otro estilo";
+            document.body.appendChild(div2);
+    </script>
+    <style>
+        .nuevaClase{
+            border-bottom: 2px solid red;
+            background: coral;
+            margin-top: 10px;
+        }
+    </style>
+</body>
+</html>

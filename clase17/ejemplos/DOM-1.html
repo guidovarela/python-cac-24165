@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<title>DOM-1</title>
+<style>
+    * {
+        font-family: Verdana, Geneva, Tahoma, sans-serif
+    }
+</style>
+
+<body>
+    <div class="ejemplo">Primer elemento div con clase = "ejemplo".</div>
+    <div class="ejemplo">Segundo elemento div con clase = "ejemplo".</div>
+    <div class="ejemplo">Tercer elemento div con clase = "ejemplo".</div>
+    <p>Haga clic en los botones para cambiar el texto del primer elemento div con clase = "ejemplo" (índice 0), o para cambiar todos los elementos div con clase = "ejemplo".</p>
+    <button onclick="cambiarTexto()">Cambiar un párrafo</button>
+    <button onclick="cambiarTextoDos()">Cambiar todos</button>
+    <p><strong>Nota:</strong> El método getElementsByClassName() no es soportado en Internet Explorer 8 y anteriores.</p>
+    <script>
+        function cambiarTexto() {
+            var x = document.getElementsByClassName("ejemplo");
+            x[0].innerHTML = "Hola Codo a Codo!";
+        }
+        function cambiarTextoDos() {
+            var x = document.getElementsByClassName("ejemplo");
+            for (i = 0; i < x.length; i++) {
+                x[i].innerHTML = "Hola Codo a Codo! " + (i + 1);
+            }
+        }
+    </script>
+</body>
+
+</html>
