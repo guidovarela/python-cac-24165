@@ -1,65 +1,114 @@
-
-//Definimos la Clase Libro
-class Libro {
-    constructor(tit,aut,lan,sto){
-        this.titulo=tit
-        this.autor=aut
-        this.lanzamiento=lan
+//Crear la clase libros
+class Libros {
+    constructor(id,tit,aut,lan,sto){
+        this.id=id
+        this.titulo=tit,
+        this.autor=aut,
+        this.lanzamiento=lan,
         this.stock=sto
     }
-
 }
 
-let libros =[] 
+//Datos de acceso global
+const libros = []
+const formCarga = document.getElementById("form-cargar")
+let contenedor = document.querySelector("#libros-oferta")
 
-function cargarLibros(){
-    let contenedorLibros = document.querySelector("#libros-oferta")
-    //vaciar el contenedor
-    contenedorLibros.innerHTML=""
-    for (const iterator of libros) {
-        contenedorLibros.innerHTML+=iterator.titulo+" "+iterator.autor+" "+iterator.lanzamiento+"<br>"
+//DOM - Document Object Model
+// document.getElementById()
+// document.getElementsByClassName()
+// document.getElementsByName()
+// document.getElementsByTagName()
+
+function cargarLibro(e){
+    //cancelamos el evento por default
+    e.preventDefault()
+    //leer datos del form
+    let campoTit = document.getElementById("titulo").value
+    let campoAut = document.getElementById("autor").value
+    let campoLan = document.getElementById("lanzamiento").value
+    let campoSto = document.getElementById("stock").value
+    let id = libros.length + 1
+    //crear objeto
+    const nuevoLibro = new Libros(id,campoTit,campoAut,campoLan,campoSto)
+    
+    //push en el array
+    libros.push(nuevoLibro)
+    // localStorage.setItem(key,value)
+    // localStorage.setItem("titulo",nuevoLibro.titulo)
+    // localStorage.setItem("autor",nuevoLibro.autor)
+
+    let librosJSON = JSON.stringify(libros)
+    localStorage.setItem("data",librosJSON)
+
+    //recorrer el array
+    //template string -> tilde invertida o backticks
+    for (const i of libros) {
+        // contenedor.innerHTML+="<div>"+i.autor+i.titulo+"</div>"
+        contenedor.innerHTML+=`
+        <div class='libro'>
+            <div class='data'>
+                <h3>${i.titulo}</h3>
+                <p>${i.autor}
+                <br>${i.lanzamiento}
+                <br><span class='cant'>stock: ${i.stock}</span>
+                </p>
+            </div>
+            <div class='icon'>
+                <span>📚</span>
+            </div>
+        </div>
+        `
+    }
+
+    //borramos los campos
+    formCarga.reset()
+}
+
+function borrarLibros(){
+    contenedor.innerHTML=""
+    // libros.pop()
+}
+
+function recuperarData(e){
+    e.preventDefault()
+    // let leerJSON = JSON.parse(localStorage.getItem("data"))
+    let infoJSON = localStorage.getItem("data")
+    let leerJSON = JSON.parse(infoJSON)
+    // console.log(leerJSON)
+
+    contenedor.innerHTML=""
+
+    for (const i of leerJSON) {
+        contenedor.innerHTML+=`
+        <div class='libro'>
+            <div class='data'>
+                <h3>${i.titulo}</h3>
+                <p>${i.autor}
+                <br>${i.lanzamiento}
+                <br><span class='cant'>stock: ${i.stock}</span>
+                </p>
+            </div>
+            <div class='icon'>
+                <span>📚</span>
+            </div>
+        </div>
+        `
     }
 }
 
-//crear una funcion para crear el objeto
-function crearLibro(e){
-    //aulamos la accion de submit del form (HTML)
-    e.preventDefault()
-    
-    //to-do: definir validacion de datos
-    let tit_l = document.getElementById("titulo").value
-    let aut_l = document.getElementById("autor").value
-    let lan_l = document.getElementById("lanzamiento").value
-    let sto_l = document.getElementById("stock").value
+//ejecutar la funcion de carga, por medio de un evento -> addEventListener(evento,funcion)
 
-    //instancia -> nuevo objeto
-    let nuevoLibro = new Libro(tit_l,aut_l,lan_l,sto_l)
+formCarga.addEventListener("submit",cargarLibro)
 
-    libros.push(nuevoLibro)
+let linkJSON = document.getElementById("json")
+linkJSON.addEventListener("click",recuperarData)
 
-    cargarLibros()
+let btnBorrar = document.getElementById("borrar-libros")
+btnBorrar.addEventListener("click",borrarLibros)
 
-    formCargaLibros.reset()
 
-    //almacernarlo en Web Storage
-    localStorage.setItem("tit_1",tit_l)
-    localStorage.setItem("aut_1",aut_l)
-    //otra forma:
-    localStorage.lan_1=lan_l
-    localStorage.sto_1=sto_l
-}
 
-function leerStorage(){
-    console.log(localStorage.getItem("tit_1",tit_l))
-    console.log(localStorage.getItem("aut_1",aut_l))
-    console.log(localStorage.getItem("lan_1",lan_l))
-    console.log(localStorage.getItem("sto_1",sto_l))
-}
 
-//ubicamos el form
-let formCargaLibros = document.getElementById("form-cargar")
-
-//addEventListener("evento",funcionAEjecutar)
-formCargaLibros.addEventListener("submit",crearLibro)
 
 

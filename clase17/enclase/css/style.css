@@ -40,7 +40,7 @@ html{
         }
 
     #form-cargar{
-        padding: 10px;
+        padding: 5px;
     }
     #form-cargar label{
         text-transform: capitalize;
@@ -48,19 +48,30 @@ html{
     #form-cargar input{
         width: 100%;
         padding: .5em;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
     }
     #form-cargar input[type="submit"],#form-cargar input[type="button"]{
-        width: 49.609%;
+        width: 49%;
     }
 
-
-    .libro{
-        padding: 10px;
-        border: 1px solid;
-        margin-bottom: 10px;
-        border-radius: 10px;
+    #libros-oferta{
+        display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
         }
-        .libro h3{
-
-        }
+        .libro{
+            width:45%;
+            padding: 10px;
+            border: 1px solid;
+            margin-bottom: 10px;
+            border-radius: 10px;display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            }
+            .libro .data{
+                width: 70%;
+            }
+            .libro .icon{
+                width: 30%;
+                font-size: 3em;
+            }
