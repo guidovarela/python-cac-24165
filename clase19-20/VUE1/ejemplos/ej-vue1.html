@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejemplo de Vue 3</title>
+  <script src="https://unpkg.com/vue@3.2.6"></script>
+</head>
+<body>
+  <div id="app">
+    <h1>{{ titulo }}</h1>
+    
+    <input :value="mensaje" @input="actualizarMensaje" v-show="mostrarInput">
+    
+    <button @click="toggleInput">Mostrar/Ocultar Input</button>
+    <button @click="saludar">Saludar</button>
+  </div>
+
+  <script>
+    const { createApp } = Vue;
+
+    const app = createApp({
+      data() {
+        return {
+          titulo: 'Ejemplo de Vue 3',
+          mensaje: '¡Hola, Vue!',
+          mostrarInput: true
+        };
+      },
+      methods: {
+        actualizarMensaje(event) {
+          this.mensaje = event.target.value;
+        },
+        toggleInput() {
+          this.mostrarInput = !this.mostrarInput;
+        },
+        saludar() {
+          alert('¡Saludos desde Vue 3! Mensaje: ' + this.mensaje);
+        }
+      }
+    });
+
+    app.mount('#app')
+  </script>
+</body>
+</html>

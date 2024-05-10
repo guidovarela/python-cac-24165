@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clase 20 guia</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+        *{
+            font-family: 'Open Sans', sans-serif;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <ul>
+        <li v-for="lista in temario"> {{lista.toUpperCase()}}</li>
+    </ul>
+
+    <h1 ref="title"> Modifico mi sentido usando refs</h1>
+
+    <hr>
+    <div v-for="(lista,index) in temario">
+        <h1>
+            {{lista.toUpperCase()}}
+        </h1>
+        <div v-show="index==0">
+            <p>Cuando hablamos de reactividad en los dos sentidos es cuando le decimos al elemento creado que vamos adarle utilidad a todo lo que vayamos a  estar ingresando como datos, etc.</p>
+            <h1>EJEMPLO</h1>
+
+            <div> <h1>Ingreso e imprimo pedidos con 3 campos </h1>
+
+                <div>
+                    <label for="">Nombre Producto</label><br>
+                    <input type="text" v-model="pedido.nombre" placeholder="ingrese nombre producto">
+                </div>
+
+                <div>
+                    <label> Precio del producto </label> <br>
+                    <input type="text" v-model="pedido.precio" placeholder="ingrese precio del producto">
+                </div>
+
+                <div>
+                    <label for=""> Cantidad del producto</label> <br>
+                    <input type="text" v-model="pedido.cantidad" placeholder="ingrese total producto"><br>
+                </div>
+
+                <button @click="agregarPedido(pedido)"> AGREGAR </button>
+
+                <div>
+                    <ol>
+                    <li v-for= "pedido in pedidos">Nombre del pedido {{pedido.nombre}} | Precio: {{pedido.precio}} | Cantidad: {{pedido.cantidad}}</li>
+                    </ol>
+                </div>
+
+            </div>
+            <hr>
+        </div>
+        
+        <div v-show="index==1">
+            <p>V-ON me permite darle acciones o lo que conocemos como event listeners, los cuales puedo darle facilidad al usuario de hacer click pasar el mouse o modificar algún atributo del tipo de estilo modificando sus propiedades.</p>
+            <h1>EJEMPLO 1 </h1>
+             <div v-on:mouseover="changeBackGround" :class="{ cssEstilo: cssValue}">
+                BOX 1
+             </div>
+             <br>
+
+             <input type="text" v-on:keyup.enter="renderValue()" >
+             <p> SOY TU RENDERIZADO {{ value }} </p>
+             <br>
+             <hr>
+
+             <h1>EJEMPLO de computadas</h1>
+             <p> atributo del tipo objeto que nos devuelve calculos de los elementos que existen , estas se declaran por medio funcional, ergo tienen que retornar algo, si no su efecto es nulo</p>
+ 
+             <h1>Esto me va a mostrar la cantidad de temas que se ven: {{totalTemario}}</h1>
+             
+        </div >
+
+        <div v-show="index==2">
+        
+            <p> Me permiten observar los cambios que se realizan en un elemento o en una variable</p>
+
+            <h2>Si cambia un valor específico lo voy a colocar acá, ejemplo pedidos => cuantos pedidos hay? pero solo lo muestra cuando es mayor a 3 Total: {{totalPedidos}}</h2>
+
+        </div >
+
+        <div v-show="index==3">
+            <h1> REF en vue </h1>
+            <p> Con esto nos permite realizar acciones y modificaciones en la DOM</p>
+            <p>
+                sea el caso, voy a tener ciertos elementos que los voy a llamar como ref, y modificarlos
+            </p>
+            <p>
+                Voy a imprimir los elementos que tiene el REF del tipo header
+            </p>
+            <p>Hace click y mira el titulo</p>
+            <button @click="()=>this.$refs.title.style.transform = 'rotate(140deg)'"> ROTATE </button>
+
+        </div >
+
+    </div>
+        
+    
+
+</div>
+
+<style>
+    .cssEstilo{
+        background-color: red;
+    }
+</style>
+<script src="https://unpkg.com/vue@next"></script>
+<script src="main.js"></script>
+
+</body>
+</html>

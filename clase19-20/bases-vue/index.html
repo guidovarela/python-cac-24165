@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport"content="width=device-width, initial-scale=1.0"/>
+    <title>Intro Vue.js</title>
+  </head>
+
+  <body>
+    <p>Esto es una zona normal, sin control de Vue.js</p>
+    <!-- Vamos a decirle donde queremos que Vue controle nuestra web, en este caso este DIV -->
+    <div id="myApp">
+      <p>Bajo el control de Vue.js</p>
+      <!-- Todo lo que esté dentro del div lo maneja Vue.js, para eso no debe tener template!!!  -->
+      <p>{{ saludo }}</p>
+      <p>{{ message }}</p>
+
+
+      <button @click="changeMessage">Clic</button>
+
+<hr>
+
+      <h1>Mis heroes</h1>
+      <ul>
+        <li v-for="heroe in heroes">{{ heroe }}</li>
+      </ul>
+      
+      <hr>
+      <h1>Mis heroes más pro :)</h1>
+      <ul>
+        <li
+          v-for="(heroe, index) in heroes"
+          :key="heroe.id"
+        >
+          {{index+1}}: {{ heroe.name }}
+        </li>
+      </ul>
+
+      <p>Nuevo Heroe: {{newHero}}</p>
+      <input type="text" v-model.trim="newHero" @keyup.enter="addHero" />
+
+      <p>Hay más de 5 héroes???</p>
+      <p v-if="heroes.length > 5">
+        <strong>Si</strong>
+      </p>
+      <p v-else>
+        <strong>No</strong>
+      </p>
+
+      
+    </div>
+    <p>Fuera del control de Vue.js</p>
+
+    <!-- Cargamos Vue -->
+    <script src="https://unpkg.com/vue@3"></script>
+    <!-- Importamos nuestro script -->
+    <script src="app.js"></script>
+  </body>
+</html>

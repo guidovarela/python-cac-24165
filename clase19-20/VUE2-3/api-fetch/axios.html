@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axios Sample</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+    <div class="title">
+        <h1 >Cargar Productos (VUE.js + Axios)</h1>
+    </div>
+    <div id="render" class="title">
+        <h3>Click sobre cualquier item para descartarlos</h3>
+        <h4>Cantidad de items descartados {{counters}}</h4>
+        <h4 v-show="setWarn">Estas a punto de quedarte sin items</h4>
+        <div v-for="item in values" >
+            <div @click="addHidden(item.id)"  :key="item.id"  class="card">
+                <div class="data">
+                    <h1 :data-value="item.brand" :title="item.title" >{{item.title.toUpperCase()}}</h1>
+                    <img :src="item.thumbnail" alt="item.brand">
+                    <h3> {{ item.price }} USD</h3>
+                </div>
+                <div class="images">
+                    <img :src="pics" alt="" v-for="pics in item.images ">
+                </div>
+            </div>
+        </div>
+    <Linker></Linker>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" ></script>
+<script src="https://unpkg.com/vue@3"></script>
+
+<script>
+/*render con vue*/
+
+let Linker = {
+    
+    template: `<h1>SOY UN COMPONENTE LLAMADO: {{ nombre }}</h1>`,
+    data(){
+        return {
+            nombre: 'Linker'
+        }
+            
+    }
+}
+
+
+let dataToRender = {
+    data(){
+        return {
+            nombre : '<h1>Ejemplo de render con Axios</h1>',
+            values : [],
+            counter : [],
+            setWarn : false
+            
+        }
+    },
+    async created(){
+
+        let url = 'https://dummyjson.com/products'; //link to restapi endpoint
+        let res = await axios.get(url);
+        this.values = await res.data.products;
+  
+    },
+    methods:{
+        addHidden(id){
+            this.counter.push(id);
+            this.values = this.values.filter( item => item.id !=id)
+            
+        }
+    },
+    computed:{
+        counters(){
+            return this.counter.length !== 0 ? this.counter.length: ''
+        }
+        
+    },
+    watch:{
+        values(){
+            if(this.values.length < 15){
+                this.setWarn = true;
+            }
+        }
+    },
+    components:{
+        Linker
+    }
+
+
+}
+
+let render = Vue.createApp(dataToRender)
+
+
+render.mount('#render');
+
+</script>
+
+</body>
+</html>

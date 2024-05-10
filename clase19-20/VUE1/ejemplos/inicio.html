@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VUE.js</title>
+</head>
+<body>
+    
+    <div id="app">
+        <p id="mensaje">{{mensaje}}</p>
+        <p id="curso">{{curso}}</p>
+
+        <div class="contador">
+            <h2>Contador</h2>
+            <div class="numeros">
+                <button @click="count++">Cliqueaste {{count}} veces</button>
+            </div>
+        </div>
+
+        <hr>
+
+        <p>
+            <h1 v-text="mensaje"></h1>
+        </p>
+        <p v-text="curso"></p>
+
+        <hr>
+        <div id="contacto">{{contacto}}</div>
+
+    </div>
+      
+      <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+      <script>
+
+        const { createApp } = Vue 
+            createApp({
+                data() {
+                    return {
+                        mensaje: 'Hola Mundo con Vue!',
+                        curso: 'Codo a Codo',
+                        count: 0
+                    }
+                }
+            }).mount('#app')
+      </script>
+      
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VUE JS</title>
+
+    <style>
+        /* we will explain what these classes do next! */
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
+    </style>
+</head>
+<body>
+    
+    <div id="app">
+        <h1>Usando Vue.js</h1>
+        <!-- interpolacion 
+        <ul>
+            <li v-text="nombre"></li>
+            <li>{{apellido}}</li>
+            <li v-html="message"></li>
+        </ul>-->
+         
+        <hr>
+
+            <ul >
+                <li v-for="prod in productos">
+                    <div v-if="prod.cantidad < 46" style="border:1px solid red">
+                        Saldo: {{prod.nombre}} <p>Cantidad: {{prod.cantidad}}</p>
+                    </div>
+                    
+                    <div v-else >
+                        <strong style="text-transform: capitalize;">{{prod.nombre}}</strong> <p>Cantidad: {{prod.cantidad}}</p>
+                    </div> 
+                </li>
+            </ul>
+    </div>
+
+
+    <!-- Importar la libreria Vue.js -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <!-- logica Vue.js -->
+    <script src="js/vue2.js"></script>
+
+</body>
+</html>
