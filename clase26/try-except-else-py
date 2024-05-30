@@ -1,0 +1,13 @@
+numeros = [2, 0, 5, 10, 4, 8]
+
+for numero in numeros:
+    try:
+        resultado = 10 / numero
+    except:
+        print(f"Error: División por cero al dividir 10 por {numero}.")
+    else:
+        print(f"Resultado de la división de 10 por {numero}: {resultado}")
+
+'''
+En este ejemplo, estamos iterando a través de la lista numeros. Usamos un bloque try para intentar realizar una división (10 dividido por el número actual) en cada iteración. Si el número actual es 0, se generará una excepción "ZeroDivisionError". En ese caso, el bloque except se ejecutará para manejar la excepción y mostrar un mensaje de error. Si la división se realiza con éxito (sin excepciones), el bloque else se ejecutará y mostrará el resultado de la división.
+'''
