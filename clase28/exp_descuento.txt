@@ -1,0 +1,22 @@
+El descuento se multiplica por 0.9 (que representa el 90% del precio original) en el código para reducir el precio en un 10%. Esto es una forma común de aplicar descuentos en matemáticas y programación. Aquí hay una explicación más detallada:
+
+Supongamos que el precio original de un producto es P. Para aplicar un descuento del 10% a ese precio, puedes restar el 10% del precio original de la siguiente manera:
+
+Descuento = 0.10 * P
+
+Entonces, el precio con descuento sería:
+
+Precio con descuento = P - Descuento
+Precio con descuento = P - (0.10 * P)
+
+Puedes simplificar esta ecuación de la siguiente manera:
+
+Precio con descuento = P * (1 - 0.10)
+
+Donde 1 - 0.10 es igual a 0.90. Por lo tanto:
+
+Precio con descuento = P * 0.90
+
+En el código, estamos multiplicando el precio original (P) por 0.9 para calcular el precio con descuento, lo que es equivalente a aplicar un descuento del 10%.
+
+Es importante notar que 0.9 es solo un valor específico para un descuento del 10%. Si el descuento fuera diferente, se utilizaría un valor distinto en el cálculo. Por ejemplo, si el descuento fuera del 20%, se usaría 0.8 en lugar de 0.9 en el cálculo para obtener el precio con descuento.
