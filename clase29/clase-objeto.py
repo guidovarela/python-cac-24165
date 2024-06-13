@@ -4,14 +4,14 @@ persona2_nombre = "Julian"
 persona1_edad = 23
 persona2_edad = 45
 
-"""
+
 personas = [
     {
     "nombre":"Marisa",
     "edad":23
-    },
+    }
 ]
-"""
+
 
 class Persona:
     # atributos
@@ -23,14 +23,25 @@ class Persona:
         self.nombre = nombre
 
     # metodos
+    # def saludar(self):
     def __str__(self):
         return (f"Hola, soy {self.nombre} {self.apellido} y tengo {self.edad} años")
 
 # instancia -> objeto
-# persona1 = Persona("Marisa","Viotti",25)
-# persona2 = Persona("Julian","Alvarez",21)
+# persona1 = Persona()
+# persona1.indentificar("Marisa","Viotti",25)
 # print(persona1.saludar())
-# print(persona2.saludar())
+
+# persona2 = Persona("Julian","Alvarez",21)
+
+# persona3 = Persona("Miguel","Gutierrez",55)
+
+# print(persona2)
+
+
+
+
+
 personas = []
 
 def cargarPersona():
@@ -48,5 +59,5 @@ def leerUsuarios(u):
         print(u[i].edad)
         print("--------------")
 
-cargarPersona()
-leerUsuarios(personas)
+# cargarPersona()
+# leerUsuarios(personas)

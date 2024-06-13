@@ -2,11 +2,10 @@
 # Clase Persona
 class Persona:
     # atributos
-    def __init__(self,nombre,apellido,edad,actividad):
+    def __init__(self,nombre,apellido,edad):
         self.edad = edad
         self.apellido = apellido
         self.nombre = nombre
-        self.actividad = actividad
     # metodos
     # def __str__(self):
     def saludar(self):
@@ -32,5 +31,6 @@ def cargar_personas_xCantidad(p):
 def leerUsuarios(u):
     # print(personas)
     for i in range(len(u)):
-        print(u[i])
+        print(u[i].nombre, u[i].apellido)
+        print(f"{u[i].edad} años")
         print("--------------")
