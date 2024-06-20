@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+
+    <title>{{title}}</title>
+
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            {{ saludo }}
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/tienda">Tienda</a>
+                </li>
+                <li>
+                    <a href="/contacto">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    
+</body>
+</html>
