@@ -1,4 +1,3 @@
-# Data
 personas = [{
             "id":"0",
             "nombre":"Marcelo Perez",
@@ -32,6 +31,11 @@ personas = [{
             "puesto":"Dev Ops",
             "linkedin":"http://linkedin.com/user",
             "email":"maximo@sitio.com"
+        },{
+            "id":"5",
+            "nombre":"Gaston Dávila",
+            "puesto":"Desarrollador",
+            "linkedin":"http://linkedin.com/user",
+            "email":"gaston@sitio.com"
         }
     ]
-

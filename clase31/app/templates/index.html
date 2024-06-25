@@ -1,35 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+{% include 'defaults/head.html' %}
 
-    <title>{{title}}</title>
-
-</head>
 <body>
+    {% include 'defaults/header.html'%}
+    
+    <section class="container">
+        <h1>{{title[0]}}</h1>
 
-    <header>
-        <div class="logo">
-            {{ saludo }}
-        </div>
-        <nav class="navbar">
-            <ul>
-                <li>
-                    <a href="/">Home</a>
-                </li>
-                <li>
-                    <a href="/tienda">Tienda</a>
-                </li>
-                <li>
-                    <a href="/contacto">Contacto</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+
+    </section>
     
     
-</body>
-</html>
+    {% include 'defaults/scriptsjs.html'%}
+    {% include 'defaults/footer.html'%}

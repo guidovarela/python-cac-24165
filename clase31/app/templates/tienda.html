@@ -1,0 +1,19 @@
+{% include 'defaults/head.html' %}
+<body>
+    
+{% include 'defaults/header.html' %}
+
+    <section class="container">
+
+        <div class="title">
+            <h1>
+                <i class="bi bi-shop"></i> {{ title[0] }}
+            </h1>
+        </div>
+
+        {{productos}}
+
+    </section>
+
+
+{% include 'defaults/footer.html'%}

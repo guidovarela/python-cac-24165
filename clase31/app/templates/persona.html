@@ -1,0 +1,31 @@
+{% include 'defaults/head.html' %}
+
+<body>
+    
+    {% include 'defaults/header.html'%}
+
+    <div class="container">
+
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="/">Home</a></li>
+              <li class="breadcrumb-item"><a href="/staff">Staff</a></li>
+            </ol>
+          </nav>
+
+        <div class="bg-white text-dark p-3 mb-2 rounded">
+                <h2 class="fw-bold">
+                    {{persona.nombre}}
+                </h2>
+                <h3>
+                    {{persona.puesto}}
+                </h3>
+                <div class="fs-1">
+                    <a href="{{persona.linkedin}}"><i class="bi bi-linkedin"></i></a> 
+                    <a href="mailto:{{persona.email}}"><i class="bi bi-envelope-fill"></i></a>
+                </div>
+        </div>
+        <a href="/staff" class="btn btn-dark"><i class="bi bi-chevron-double-left"></i> volver</a>
+    </div>
+
+{% include 'defaults/footer.html'%}
