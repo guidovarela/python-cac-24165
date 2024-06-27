@@ -1,0 +1,39 @@
+{% include 'defaults/head.html' %}
+<body>
+    
+{% include 'defaults/header.html' %}
+
+    <section class="container">
+
+        <div class="title">
+            <h1>
+                <i class="bi bi-shop"></i> {{ title[0] }}
+            </h1>
+        </div>
+
+        <div class="form-productos">
+            
+            <form action="/insertar_producto" method="POST">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Titulo Producto</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" name="nombre">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Descripcion</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" name="descripcion"></textarea>
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput3" class="form-label">Precio</label>
+                    <input type="number" maxlength="9" class="form-control" id="exampleFormControlInput3" name="precio">
+                  </div>
+                  <input type="submit" class="btn btn-dark" value="Cargar Producto">
+            </form>
+
+        </div>
+
+
+
+    </section>
+
+
+{% include 'defaults/footer.html'%}

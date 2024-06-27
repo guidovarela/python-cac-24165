@@ -5,13 +5,45 @@
 
     <section class="container">
 
-        <div class="title">
-            <h1>
-                <i class="bi bi-shop"></i> {{ title[0] }}
-            </h1>
+        
+        <div class="slide my-5">
+            <div class="title">
+                <h1>
+                    <i class="bi bi-shop"></i> {{ title[0] }}
+                </h1>
+            </div>
+            <div class="slide-img rounded overflow-hidden">
+                <img class="img-fluid opacity-50" src="{{url_for('static',filename='img/store_bg.jpg')}}" alt="bg {{title[0]}}">
+            </div>
         </div>
 
-        {{productos}}
+        <div class="row">
+            {% for i in productos %}
+                <div class="col-10">
+                    <h2 class="h5" title="{{i[2]}}" data-bs-toggle="collapse" href="#dataCollapse{{i[0]}}" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        {{i[1]}}
+                    </h2>
+                    <div class="collapse" id="dataCollapse{{i[0]}}">
+                        <div class="row">
+                            <div class="col bg-white bg-opacity-50 rounded text-dark p-2">
+                                {{i[2]}}
+                            </div>
+                            <div class="col-3 text.right p-2">
+                                $ {{i[3]}} .-
+                            </div>
+                        </div>
+
+                    </div> 
+                </div>
+                <div class="col-2">
+                    <a href="/editar_producto/{{i[0]}}" class="btn btn-white"><i class="bi bi-pencil"></i></a>
+                    <a href="/borrar_producto/{{i[0]}}" class="btn btn-white"><i class="bi bi-trash-fill"></i></a>
+                </div>
+                <hr>
+            {% endfor%}
+        </div>
+
+        <a href="/cargar_prod" class="btn btn-warning">+ Cargar Producto</a>
 
     </section>
 

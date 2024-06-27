@@ -1,4 +1,15 @@
+html{
+    font-family: "Montserrat" !important;
+}
 body{
+    font-family: "Montserrat";
     background: tomato;
     color: white;
 }
+
+.slide-img{
+    height: 25vh;
+    }
+    .slide-img img{
+        transform: translateY(-45%);
+    }

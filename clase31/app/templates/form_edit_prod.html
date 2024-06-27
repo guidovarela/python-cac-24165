@@ -1,0 +1,45 @@
+{% include 'defaults/head.html' %}
+<body>
+    
+{% include 'defaults/header.html' %}
+
+    <section class="container">
+
+        <div class="title">
+            <h1>
+                <i class="bi bi-shop"></i> {{ title[0] }}
+            </h1>
+        </div>
+
+        <div class="form-productos bg-warning p-3">
+            <form action="/update_producto" method="POST">
+                <div class="mb-3">
+                    <!-- id -->
+                    <input type="hidden" name="prod_id" value="{{producto[0]}}">
+
+                    <label for="exampleFormControlInput1" class="form-label">Titulo Producto</label>
+                    <!-- nombre -->
+                    <input type="text" class="form-control" id="exampleFormControlInput1" name="prod_nombre" value="{{producto[1]}}">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Descripcion</label>
+                    <!-- desc -->
+                    <textarea class="form-control" id="exampleFormControlTextarea1" name="prod_descripcion">{{producto[2]}}</textarea>
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput3" class="form-label">Precio Precio</label>
+                    <!-- precio -->
+                    <input type="number" class="form-control" id="exampleFormControlInput3" name="prod_precio" value="{{producto[3]}}">
+                  </div>
+
+                  <input type="submit" class="btn btn-dark" value="Guardar Cambios">
+            </form>
+
+        </div>
+
+
+
+    </section>
+
+
+{% include 'defaults/footer.html'%}
